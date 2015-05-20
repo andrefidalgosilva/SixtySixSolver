@@ -1,5 +1,6 @@
 # Sixty Six Solver
-
+## Description
+	
 This is a simple program to solve the "Vietnamese third grader" math problem described by VN Express and reported by The Guardian on Wednesday 20 May 2015 09.37 BST.
 More information [here](http://www.theguardian.com/science/alexs-adventures-in-numberland/2015/may/20/can-you-do-the-maths-puzzle-for-vietnamese-eight-year-olds-that-has-stumped-parents-and-teachers).
 
