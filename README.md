@@ -64,7 +64,8 @@ If you're just looking for a single solution, here's one from the 3359844 possib
 ## Program arguments
 	
 | Argument      | Effect                                                                                      |
-|---------------|---------------------------------------------------------------------------------------------|| (none)	    | Normal program execution, every solution will be output.									  |
+|---------------|---------------------------------------------------------------------------------------------|
+| (none)	    | Normal program execution, every solution will be output.									  |
 | -onlyone      | This will output only the first solution found (with the lowest possible values for a to i).|
 | -random       | This will output only ONE solution out of all solutions found. Great for getting a different solution every time.|
 | -noparse      | This will output solutions as soon as they're found, skipping the generation and handling of a Solutions structure (you might not want to print the output to a file when using this argument).|
