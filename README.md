@@ -33,7 +33,7 @@ Basically, the problem requires students to figure out every missing digit in th
 	 | = |
 	 | 66| <--
 	 
-**It will output every solution possible**. Setting output to a text file is *very* recommended!
+**This program will output every solution possible**. Setting output to a text file is *very* recommended!
 
 Finding all solutions was the main goal of this program -- not efficiency!
 Therefore this program has "**O(n!)**" (factorial) complexity (with *n* restricted from 1 to 9).
