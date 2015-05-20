@@ -1,6 +1,8 @@
 package sixtysixsolver;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Random;
 
 /**
@@ -22,15 +24,19 @@ public class SixtySixSolver {
 	// Possible args: -onlyone
 	//				  -random
 	//				  -noparse
+	//				  -perfectsolutions
 	
 	private static ArrayList<Solution> solutions = new ArrayList<Solution>();
+	private static ArrayList<Solution> perfectSolutions = new ArrayList<Solution>();
 	private static int numberOfSolutions = 0;
+	private static int numberOfPerfectSolutions = 0;
 	
 	public static void main(String[] args) {
 		// handle arguments
 		boolean onlyOneSolution = false;	
 		boolean noParse = false;
 		boolean random = false;
+		boolean perfectSolution = false;
 		int randomSolutionID = 1;
         if (args.length != 0) {
         	if(args.length > 1) {
@@ -45,9 +51,11 @@ public class SixtySixSolver {
 			onlyOneSolution = (args[0].equals("-onlyone"));
 			noParse = (args[0].equals("-noparse"));
 			random = (args[0].equals("-random"));
+			perfectSolution = (args[0].equals("-perfectsolutions"));
 			if(!args[0].equals("-onlyone")
 					&& !args[0].equals("-noparse")
-					&& !args[0].equals("-random")) {
+					&& !args[0].equals("-random")
+					&& !args[0].equals("-perfectsolutions")) {
 				System.out.println("Invalid argument. Running with no arguments...");
 				try {
     			    Thread.sleep(1200);
@@ -86,6 +94,12 @@ public class SixtySixSolver {
 															+ g + " * " + h + " / "
 															+ i + " - 10 = 66\n");
 												if(onlyOneSolution) break loopstart;
+												if(perfectSolution
+														&& allDifferent(a, b, c, d, e, f, g, h, i)) {
+													perfectSolutions
+														.add(new Solution(a, b, c, d, e, f, g, h, i));
+													numberOfPerfectSolutions++;
+												}
 											}
 		
 		
@@ -107,7 +121,7 @@ public class SixtySixSolver {
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();
 			}
-			System.out.println("SOLUTION:\n"
+			System.out.println("SOLUTION: \n"
 					+ randomSolution.getA() + " + 13 * " + randomSolution.getB()
 					+ " / " + randomSolution.getC() + " + "
 					+ randomSolution.getD() + " + 12 * " + randomSolution.getE()
@@ -120,6 +134,32 @@ public class SixtySixSolver {
 			return;
 		}
 		
+		if(perfectSolution) {
+			System.out.println("\nFound solutions! "
+					+ "Only perfect solutions requested (no digits repeated).");
+			try {
+			    Thread.sleep(2000);
+			} catch(InterruptedException ex) {
+			    Thread.currentThread().interrupt();
+			}
+			
+			System.out.println("PERFECT SOLUTIONS: ");
+			for(Solution s : perfectSolutions) {
+				System.out.println("PERFECT SOLUTION: \n"
+						+ s.getA() + " + 13 * " + s.getB()
+						+ " / " + s.getC() + " + "
+						+ s.getD() + " + 12 * " + s.getE()
+						+ " - " + s.getF() + " - 11 + "
+						+ s.getG() + " * " + s.getH() + " / "
+						+ s.getI() + " - 10 = 66\n");
+			}
+			long endTime = System.nanoTime();
+			long timeTaken = (endTime - startTime);
+			System.out.println("\nNumber of perfect solutions found: " + numberOfPerfectSolutions);
+			System.out.println("\nTime taken: " + (timeTaken / 1000000000) + " seconds.");
+			return;
+		}
+		
 		if(foundSolution) {
 			System.out.println("\nFound solutions! Outputting solutions...");
 			try {
@@ -128,9 +168,9 @@ public class SixtySixSolver {
 			    Thread.currentThread().interrupt();
 			}
 			
-			System.out.println("SOLUTIONS:");
+			System.out.println("SOLUTIONS: ");
 			for(Solution s : solutions) {
-				System.out.println("SOLUTION:\n"
+				System.out.println("SOLUTION: \n"
 						+ s.getA() + " + 13 * " + s.getB()
 						+ " / " + s.getC() + " + "
 						+ s.getD() + " + 12 * " + s.getE()
@@ -159,5 +199,11 @@ public class SixtySixSolver {
 		}
 		
 		return result;
+	}
+	
+	private static boolean allDifferent(int a, int b, int c,
+										int d, int e, int f,
+										int g, int h, int i) {
+		return new HashSet<Integer>(Arrays.asList(a, b, c, d, e, f, g, h, i)).size() == 9;
 	}
 }
