@@ -53,13 +53,13 @@ Results when running on my machine:
 
 	\*gigantic list of solutions\*
 
-	Number of solutions found: 3359844
+	Number of solutions found: 442232
 
-	Time taken: 219 seconds.
+	Time taken: 45 seconds.
 	
-If you're just looking for a single solution, here's one from the 3359844 possible:
+If you're just looking for a single solution, here's one from the 442232 possible:
 
-	9 + 13 * 9 / 9 + 8 + 12 * 4 - 3 - 11 + 6 * 4 / 2 - 10 = 66
+	9 + 13 * 9 / 9 + 9 + 12 * 5 - 9 - 11 + 9 * 5 / 9 - 10 = 66
 	
 	
 ## Perfect solutions
@@ -70,13 +70,13 @@ Results when running on my machine:
 
 	\*list of perfect solutions\*
 
-	Number of perfect solutions found: 2672
+	Number of perfect solutions found: 128
 
-	Time taken: 17 seconds.
+	Time taken: 11 seconds.
 	
-If you're just looking for a single perfect solution, here's one from the 2672 possible:
+If you're just looking for a single perfect solution, here's one from the 128 possible:
 
-	9 + 13 * 8 / 7 + 6 + 12 * 5 - 2 - 11 + 3 * 1 / 4 - 10 = 66
+	9 + 13 * 8 / 6 + 2 + 12 * 4 - 1 - 11 + 7 * 5 / 3 - 10 = 66
 
 
 ## Program arguments
