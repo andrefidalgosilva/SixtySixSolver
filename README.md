@@ -64,7 +64,7 @@ If you're just looking for a single solution, here's one from the 3359844 possib
 	
 ## Perfect solutions
 
-The program supports perfect solutions -- that is, solutions where every digit is different. This will output every solution to this particular subproblem (which may be the main problem, depending on your definition of the original Vietnamese problem. To only get perfect solutions, run the program with the "-perfectsolutions" argument.
+The program supports perfect solutions -- that is, solutions where every digit is different. This will output every solution to this particular subproblem (which may be the main problem, depending on your definition of the original Vietnamese problem). To only get perfect solutions, run the program with the "-perfectsolutions" argument.
 
 Results when running on my machine:
 
