@@ -15,6 +15,7 @@ Basically, the problem requires students to figure out every missing digit in th
 	 | c |
 	 | + |
 	 | d |
+	 | + |
 	 | 12|
 	 | * |
 	 | e |
