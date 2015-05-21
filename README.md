@@ -41,7 +41,7 @@ Therefore this program has "**O(n!)**" (factorial) complexity (with *n* restrict
 
 __
 
-*Actually, if you look at the program logic, you'll notice that I'm running a second loop through a "solutions" data structure, which will increase the running time of the program. Why am I using that structure? Initially I had planned to do some more things with the solutions, however...!*
+*Actually, if you look at the program logic, you'll notice that I'm running a second loop through a "solutions" data structure, which will increase the running time of the program. This is so all solutions can be collected and parsed into a neat output structure.*
 
 *If you want to avoid this second loop, run the program with the "-noparse" argument! :)*
 
