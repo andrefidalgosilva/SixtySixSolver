@@ -193,7 +193,7 @@ public class SixtySixSolver {
 		boolean result = false;
 		
 		try {
-			result = ((a + 13 * b / c + d + 12 * e - f - 11 + g * h / i - 10) == 66);
+			result = ((a + 13 * (double)b / c + d + 12 * e - f - 11 + g * (double)h / i - 10) == 66);
 		} catch (ArithmeticException ae) { //this is here in the unlikely event of a zero division
 			return false;
 		}
