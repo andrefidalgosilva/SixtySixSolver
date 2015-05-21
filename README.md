@@ -59,16 +59,34 @@ Results when running on my machine:
 If you're just looking for a single solution, here's one from the 3359844 possible:
 
 	9 + 13 * 9 / 9 + 8 + 12 * 4 - 3 - 11 + 6 * 4 / 2 - 10 = 66
+	
+	
+## Perfect solutions
+
+The program supports perfect solutions -- that is, solutions where every digit is different. This will output every solution to this particular subproblem (which may be the main problem, depending on your definition of the original Vietnamese problem. To only get perfect solutions, run the program with the "-perfectsolutions" argument.
+
+Results when running on my machine:
+
+	\*list of perfect solutions\*
+
+	Number of perfect solutions found: 2672
+
+	Time taken: 17 seconds.
+	
+If you're just looking for a single perfect solution, here's one from the 2672 possible:
+
+	9 + 13 * 8 / 7 + 6 + 12 * 5 - 2 - 11 + 3 * 1 / 4 - 10 = 66
 
 
 ## Program arguments
 	
 | Argument      | Effect                                                                                      |
 |---------------|---------------------------------------------------------------------------------------------|
-| (none)	    | Normal program execution, every solution will be output.									  |
+| (none)	    | Normal program execution, every solution will be output.				      |
 | -onlyone      | This will output only the first solution found (with the lowest possible values for a to i).|
 | -random       | This will output only ONE solution out of all solutions found. Great for getting a different solution every time.|
-| -noparse      | This will output solutions as soon as they're found, skipping the generation and handling of a Solutions structure (you might not want to print the output to a file when using this argument).|
+| -noparse      | This will output solutions as soon as they are found, skipping the generation and handling of a Solutions structure (you might not want to print the output to a file when using this argument).|
+| **-perfectsolutions** | This will output only perfect solutions (as described in the section above). **Some versions of this problem only accept perfect solutions as the answer!**|
 
 Only one argument may be passed to the program.
  
