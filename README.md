@@ -1,7 +1,7 @@
 # Sixty Six Solver
 ## Description
 	
-This is a simple program to solve the "Vietnamese third grader" math problem described by VN Express and reported by The Guardian on Wednesday 20 May 2015 09.37 BST.
+This is a simple program to solve the "Vietnamese third grader" math problem described by *VN Express* and reported by *The Guardian* on Wednesday 20 May 2015 09.37 BST.
 More information [here](http://www.theguardian.com/science/alexs-adventures-in-numberland/2015/may/20/can-you-do-the-maths-puzzle-for-vietnamese-eight-year-olds-that-has-stumped-parents-and-teachers).
 
 Basically, the problem requires students to figure out every missing digit in the equation below. The digits may range from 1 to 9, and are represented below by the letters *a, b, c, d, e, f, g, h, i*. The result of the operation is 66.
@@ -37,7 +37,7 @@ Basically, the problem requires students to figure out every missing digit in th
 **This program will output every solution possible**. Setting output to a text file is *very* recommended!
 
 Finding all solutions was the main goal of this program -- not efficiency!
-Therefore this program has "**O(n!)**" (factorial) complexity (with *n* restricted from 1 to 9).
+Therefore this program has "*O(n!)*" (factorial) complexity (with *n* restricted from 1 to 9).
 
 __
 
@@ -79,6 +79,23 @@ If you're just looking for a single perfect solution, here's one from the 128 po
 	9 + 13 * 8 / 6 + 2 + 12 * 4 - 1 - 11 + 7 * 5 / 3 - 10 = 66
 
 
+## Whole perfect solutions
+
+A subset of perfect solutions are whole perfect solutions -- perfect solutions where divisions with a remainder are excluded. This means that answers that require adding or subtracting fractions are not considered solutions (which would make sense to your average third grader!). To only get whole perfect solutions, run the program with the "-perfectwhole" argument.
+
+Results when running on my machine:
+
+	\*list of whole perfect solutions\*
+
+	Number of whole perfect solutions found: 20
+
+	Time taken: 12 seconds.
+	
+If you're just looking for a single whole perfect solution, here's one from the 128 possible:
+
+	9 + 13 * 4 / 1 + 5 + 12 * 2 - 7 - 11 + 8 * 3 / 6 - 10 = 66
+
+
 ## Program arguments
 	
 | Argument      | Effect                                                                                      |
@@ -87,7 +104,8 @@ If you're just looking for a single perfect solution, here's one from the 128 po
 | -onlyone      | This will output only the first solution found (with the lowest possible values for a to i).|
 | -random       | This will output only ONE solution out of all solutions found. Great for getting a different solution every time.|
 | -noparse      | This will output solutions as soon as they are found, skipping the generation and handling of a Solutions structure (you might not want to print the output to a file when using this argument).|
-| **-perfectsolutions** | This will output only perfect solutions (as described in the section above). **Some versions of this problem only accept perfect solutions as the answer!**|
+| **-perfectsolutions** | This will output only perfect solutions (as described above). **Some versions of this problem only accept perfect solutions as the answer!**|
+| **-perfectwhole** | This will output only whole perfect solutions (as described above). **Some versions of this problem only accept whole perfect solutions as the answer!**|
 
 Only one argument may be passed to the program.
  
