@@ -91,7 +91,7 @@ Results when running on my machine:
 
 	Time taken: 12 seconds.
 	
-If you're just looking for a single whole perfect solution, here's one from the 128 possible:
+If you're just looking for a single whole perfect solution, here's one from the 20 possible:
 
 	9 + 13 * 4 / 1 + 5 + 12 * 2 - 7 - 11 + 8 * 3 / 6 - 10 = 66
 
