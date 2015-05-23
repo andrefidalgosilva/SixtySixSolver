@@ -44,7 +44,7 @@
 <h2>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
-<p>This is a simple program to solve the "Vietnamese third grader" math problem described by VN Express and reported by The Guardian on Wednesday 20 May 2015 09.37 BST.
+<p>This is a simple program to solve the "Vietnamese third grader" math problem described by <em>VN Express</em> and reported by <em>The Guardian</em> on Wednesday 20 May 2015 09.37 BST.
 More information <a href="http://www.theguardian.com/science/alexs-adventures-in-numberland/2015/may/20/can-you-do-the-maths-puzzle-for-vietnamese-eight-year-olds-that-has-stumped-parents-and-teachers">here</a>.</p>
 
 <p>Basically, the problem requires students to figure out every missing digit in the equation below. The digits may range from 1 to 9, and are represented below by the letters <em>a, b, c, d, e, f, g, h, i</em>. The result of the operation is 66.</p>
@@ -125,6 +125,25 @@ Time taken: 11 seconds.
 </code></pre>
 
 <h2>
+<a id="whole-perfect-solutions" class="anchor" href="#whole-perfect-solutions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Whole Perfect solutions</h2>
+
+<p>A subset of perfect solutions are whole perfect solutions -- perfect solutions where divisions with a remainder are excluded. This means that answers that require adding or subtracting fractions are not considered solutions (which would make sense to your average third grader!). To only get whole perfect solutions, run the program with the "-perfectwhole" argument.</p>
+
+<p>Results when running on my machine:</p>
+
+<pre><code>\*list of whole perfect solutions\*
+
+Number of perfect solutions found: 20
+
+Time taken: 12 seconds.
+</code></pre>
+
+<p>If you're just looking for a single whole perfect solution, here's one from the 128 possible:</p>
+
+<pre><code>9 + 13 * 4 / 1 + 5 + 12 * 2 - 7 - 11 + 8 * 3 / 6 - 10 = 66
+</code></pre>
+
+<h2>
 <a id="program-arguments" class="anchor" href="#program-arguments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Program arguments</h2>
 
 <table>
@@ -153,7 +172,12 @@ Time taken: 11 seconds.
 </tr>
 <tr>
 <td><strong>-perfectsolutions</strong></td>
-<td>This will output only perfect solutions (as described in the section above). <strong>Some versions of this problem only accept perfect solutions as the answer!</strong>
+<td>This will output only perfect solutions (as described above). <strong>Some versions of this problem only accept perfect solutions as the answer!</strong>
+</td>
+</tr>
+<tr>
+<td><strong>-perfectwhole</strong></td>
+<td>This will output only whole perfect solutions (as described above). <strong>Some versions of this problem only accept whole perfect solutions as the answer!</strong>
 </td>
 </tr>
 </tbody>
