@@ -78,74 +78,75 @@ public class SixtySixSolver {
 
 		System.out.println("Gathering solutions... please wait.");
 
-		loopstart: for (int a = 1; a <= 9; a++)
-			for (int b = 1; b <= 9; b++)
-				for (int c = 1; c <= 9; c++)
-					for (int d = 1; d <= 9; d++)
-						for (int e = 1; e <= 9; e++)
-							for (int f = 1; f <= 9; f++)
-								for (int g = 1; g <= 9; g++)
-									for (int h = 1; h <= 9; h++)
-										for (int i = 1; i <= 9; i++)
-											if (equationEquals66(a, b, c, d, e,
-													f, g, h, i)) {
-												solutions
-														.add(new Solution(a, b,
-																c, d, e, f, g,
-																h, i));
-												foundSolution = true;
-												numberOfSolutions++;
-												if (noParse)
-													System.out
-															.println("SOLUTION no. "
-																	+ numberOfSolutions
-																	+ ":\n"
-																	+ a
-																	+ " + 13 * "
-																	+ b
-																	+ " / "
-																	+ c
-																	+ " + "
-																	+ d
-																	+ " + 12 * "
-																	+ e
-																	+ " - "
-																	+ f
-																	+ " - 11 + "
-																	+ g
-																	+ " * "
-																	+ h
-																	+ " / "
-																	+ i
-																	+ " - 10 = 66\n");
-												if (onlyOneSolution)
-													break loopstart;
-												if ((perfectSolution)
-														&& allDifferent(a, b,
-																c, d, e, f, g,
-																h, i)) {
-													perfectSolutions
-															.add(new Solution(
-																	a, b, c, d,
-																	e, f, g, h,
-																	i));
-													numberOfPerfectSolutions++;
-												}
-												if ((perfectWhole)
-														&& allDifferent(a, b,
-																c, d, e, f, g,
-																h, i)
-														&& equationEqualsWhole66(
-																a, b, c, d, e,
-																f, g, h, i)) {
-													perfectWholeSolutions
-															.add(new Solution(
-																	a, b, c, d,
-																	e, f, g, h,
-																	i));
-													numberOfPerfectWholeSolutions++;
-												}
-											}
+		loopstart:
+			for (int a = 1; a <= 9; a++)
+			 for (int b = 1; b <= 9; b++)
+			  for (int c = 1; c <= 9; c++)
+			   for (int d = 1; d <= 9; d++)
+			    for (int e = 1; e <= 9; e++)
+			     for (int f = 1; f <= 9; f++)
+			      for (int g = 1; g <= 9; g++)
+			       for (int h = 1; h <= 9; h++)
+			        for (int i = 1; i <= 9; i++)
+			        	if (equationEquals66(a, b, c, d, e,
+			        			f, g, h, i)) {
+			        		solutions
+			        		.add(new Solution(a, b,
+			        				c, d, e, f, g,
+			        				h, i));
+			        		foundSolution = true;
+			        		numberOfSolutions++;
+			        		if (noParse)
+			        			System.out
+			        			.println("SOLUTION no. "
+			        					+ numberOfSolutions
+			        					+ ":\n"
+			        					+ a
+			        					+ " + 13 * "
+			        					+ b
+			        					+ " / "
+			        					+ c
+			        					+ " + "
+			        					+ d
+			        					+ " + 12 * "
+			        					+ e
+			        					+ " - "
+			        					+ f
+			        					+ " - 11 + "
+			        					+ g
+			        					+ " * "
+			        					+ h
+			        					+ " / "
+			        					+ i
+			        					+ " - 10 = 66\n");
+			        		if (onlyOneSolution)
+			        			break loopstart;
+			        		if ((perfectSolution)
+			        				&& allDifferent(a, b,
+			        						c, d, e, f, g,
+			        						h, i)) {
+			        			perfectSolutions
+			        			.add(new Solution(
+			        					a, b, c, d,
+			        					e, f, g, h,
+			        					i));
+			        			numberOfPerfectSolutions++;
+			        		}
+			        		if ((perfectWhole)
+			        				&& allDifferent(a, b,
+			        						c, d, e, f, g,
+			        						h, i)
+			        						&& equationEqualsWhole66(
+			        								a, b, c, d, e,
+			        								f, g, h, i)) {
+			        			perfectWholeSolutions
+			        			.add(new Solution(
+			        					a, b, c, d,
+			        					e, f, g, h,
+			        					i));
+			        			numberOfPerfectWholeSolutions++;
+			        		}
+			        	}
 
 		if (noParse) {
 			long endTime = System.nanoTime();

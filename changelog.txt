@@ -1,0 +1,33 @@
+
+ * SixtySixSolver
+ * Author: André Silva (GitHub @Andrefpvs)
+ * Version: 3.0
+ * Project website: http://andrefpvs.github.io/SixtySixSolver 
+
+ 
+ Version 3.0: 
+ 
+ 	• Added support for Whole Perfect Solutions (see README for details)
+ 	
+ 
+ Version 2.1:
+ 
+    • Fixed a critical bug with solution validation. Every solution found should be correct now.
+    • Any other release before 2.1 will output false positives and should not be used!
+
+ 
+ Version 2.0:
+ 
+    • Added support for Perfect Solutions (see README for details)
+    
+  
+ Version 1.1:
+ 
+    • Improved documentation
+
+
+ Version 1.0:
+
+    • Initial release
+
+ 
