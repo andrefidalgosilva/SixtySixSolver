@@ -5,9 +5,9 @@
  * Project website: http://andrefpvs.github.io/SixtySixSolver 
 
  
- Version 3.0: 
+ Version 3.0:
  
- 	• Added support for Whole Perfect Solutions (see README for details)
+    • Added support for Whole Perfect Solutions (see README for details)
  	
  
  Version 2.1:
