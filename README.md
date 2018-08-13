@@ -36,8 +36,7 @@ Basically, the problem requires students to figure out every missing digit in th
 	 
 **This program will output every solution possible**. Setting output to a text file is *very* recommended!
 
-Finding all solutions was the main goal of this program -- not efficiency!
-Therefore this program has "*O(n!)*" (factorial) complexity (with *n* restricted from 1 to 9).
+Finding all solutions in the very same day that the problem was published was the main goal of this program -- not efficiency or code prettiness! Therefore this program has the spaghettiest code that was ever spaghettied :)
 
 __
 
@@ -107,5 +106,5 @@ If you're just looking for a single whole perfect solution, here's one from the 
 | **-perfectsolutions** | This will output only perfect solutions (as described above). **Some versions of this problem only accept perfect solutions as the answer!**|
 | **-perfectwhole** | This will output only whole perfect solutions (as described above). **Some versions of this problem only accept whole perfect solutions as the answer!**|
 
-Only one argument may be passed to the program.
+Only one argument may be passed to the program each time it is executed.
  
