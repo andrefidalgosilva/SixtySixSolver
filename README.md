@@ -108,3 +108,6 @@ If you're just looking for a single whole perfect solution, here's one from the 
 
 Only one argument may be passed to the program each time it is executed.
  
+## About this repository
+
+This is a program I wrote with the programming skills I had at the time. Looking back at it, I can pinpoint a variety of immediate issues with it. I leave this repository open not as a display of my current skills, but as a humble personal reminder of where I started and how far I've come.
